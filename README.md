@@ -122,6 +122,8 @@ Cada enlace abre el código y la explicación del patrón correspondiente. GitHu
 
 ## Cómo preparar la exposición
 
+**Muestra visual de Observer:** [diapositivas, diagramas y recorrido paso a paso](presentaciones/observer/README.md). Disponible como PowerPoint editable y presentación HTML que funciona sin conexión.
+
 Usar el mismo orden en cada patrón: **problema → UML y participantes → solución en código → demo → consecuencias**. Los comentarios identifican el rol de cada archivo y las líneas donde se aplica el patrón. Las aserciones sirven como evidencia del comportamiento; no son parte esencial del patrón.
 
 El material es una base común para el reparto ya acordado entre integrantes. El [relevamiento y pendientes](PENDIENTES.md) distingue el estado inicial del repo y lo que falta coordinar para la presentación.

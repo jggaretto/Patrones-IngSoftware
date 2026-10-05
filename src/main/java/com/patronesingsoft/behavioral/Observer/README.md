@@ -2,6 +2,10 @@
 
 **Tipo:** Conductuales. **Ejemplo:** Avisos de un curso a sus alumnos.
 
+## Diapositivas y recorrido visual
+
+La [muestra para presentar Observer](../../../../../../../presentaciones/observer/README.md) incluye un [PowerPoint editable](../../../../../../../presentaciones/observer/observer.pptx), una [presentación HTML con recorrido paso a paso](../../../../../../../presentaciones/observer/presentacion.html) y [diagramas de clases, secuencia y flujo](../../../../../../../presentaciones/observer/diagramas.md).
+
 ## Problema
 
 Un curso debe avisar a un conjunto cambiante de interesados sin depender de clases concretas ni conocer de antemano su cantidad.
