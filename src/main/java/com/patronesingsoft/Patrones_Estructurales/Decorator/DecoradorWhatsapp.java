@@ -1,10 +1,5 @@
 package com.patronesingsoft.Patrones_Estructurales.Decorator;
 
-public class DecoradorWhatsapp {
-    
-}
-package com.patronesingsoft.Patrones_Estructurales.Decorator;
-
 /**
  * CONCRETE DECORATOR: agrega el envio por WhatsApp.
  */
