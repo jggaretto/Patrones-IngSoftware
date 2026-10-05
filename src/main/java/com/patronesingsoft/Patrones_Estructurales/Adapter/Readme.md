@@ -1,74 +1,6 @@
 # Patrones de Diseño I – Patrón Adapter (Adaptador)
 
-
-## 1. Diagrama UML de clases
-
-```mermaid
-classDiagram
-    class ProcesadorPago {
-        <<interface>>
-        +pagar(Cliente, double) boolean
-    }
-
-    class Cliente {
-        <<record>>
-        +String nombre
-        +String email
-        +String cbu
-    }
-
-    class PagoEfectivo {
-        +pagar(Cliente, double) boolean
-    }
-
-    class AdaptadorTarjeta {
-        -PasarelaTarjetaExterna pasarela
-        +pagar(Cliente, double) boolean
-    }
-
-    class AdaptadorBanco {
-        -ServicioTransferenciasBanco banco
-        +pagar(Cliente, double) boolean
-    }
-
-    class PasarelaTarjetaExterna {
-        +crearCobro(String, long) String
-    }
-
-    class ServicioTransferenciasBanco {
-        +transferir(String, int) int
-    }
-
-    ProcesadorPago <|.. PagoEfectivo
-    ProcesadorPago <|.. AdaptadorTarjeta
-    ProcesadorPago <|.. AdaptadorBanco
-    AdaptadorTarjeta o-- PasarelaTarjetaExterna : adapta
-    AdaptadorBanco o-- ServicioTransferenciasBanco : adapta
-    ProcesadorPago ..> Cliente : usa
-```
-
-### Descripción de clases, interfaces, atributos, métodos y relaciones
-
-| Elemento | Tipo | Rol | Descripción |
-|---|---|---|---|
-| `ProcesadorPago` | Interfaz | **Target** | Interfaz que el sistema ya conoce: `pagar(Cliente, double)` devuelve `true`/`false`. |
-| `PagoEfectivo` | Clase | Implementación nativa | Medio de pago propio; ya cumple la interfaz y no necesita adaptador. |
-| `PasarelaTarjetaExterna` | Clase | **Adaptee** | Librería de terceros: pide email y monto en **centavos** (`long`) y devuelve un `String` de estado. No se puede modificar. |
-| `ServicioTransferenciasBanco` | Clase | **Adaptee** | Servicio del banco: pide CBU y monto en **pesos enteros** (`int`) y devuelve un código numérico (0 = OK). |
-| `AdaptadorTarjeta` | Clase | **Adapter** | Implementa `ProcesadorPago` y traduce la llamada a la API de la pasarela. |
-| `AdaptadorBanco` | Clase | **Adapter** | Implementa `ProcesadorPago` y traduce la llamada a la API del banco. |
-| `Cliente` | Record | DTO | Agrupa los datos que cada sistema necesita (email para la pasarela, CBU para el banco). |
-
-**Relaciones:**
-
-- **Realización `Adaptador → ProcesadorPago`:** el adaptador "se disfraza" de la interfaz que el cliente espera.
-- **Agregación `Adaptador → Adaptee`:** el adaptador guarda una referencia a la clase incompatible y le delega el trabajo (**adaptador de objeto**, por composición, no por herencia).
-- **Dependencia `ProcesadorPago → Cliente`:** los adaptadores toman de `Cliente` el dato que necesita cada API.
-- El Adaptee **no conoce** al adaptador ni a la interfaz objetivo.
-
----
-
-## 2. Análisis del patrón
+## . Análisis del patrón
 
 ### a. Problema
 
@@ -142,7 +74,7 @@ for (ProcesadorPago medio : medios) {
 
 ---
 
-## 3. Implementación
+## . Implementación
 
 El código está en `src/main/java/com/patronesingsoft/Patrones_Estructurales/Adapter/` y pertenece al paquete `com.patronesingsoft.Patrones_Estructurales.Adapter`. Resumen:
 
