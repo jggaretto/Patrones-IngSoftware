@@ -1,13 +1,9 @@
 package com.patronesingsoft.Patrones_Estructurales.Adapter;
 
-/**
- * Medio de pago PROPIO: ya implementa ProcesadorPago, no necesita adaptador.
- */
+/** Medio de pago propio: ya cumple la interfaz, no necesita adaptador. */
 public class PagoEfectivo implements ProcesadorPago {
-
-    @Override
-    public boolean pagar(Cliente cliente, double monto) {
-        System.out.println("  [Efectivo] Cobro de $" + monto + " en caja a " + cliente.nombre());
+    public boolean pagar(double monto) {
+        System.out.println("  [Efectivo] Cobrando $" + monto);
         return monto > 0;
     }
 }
