@@ -3,9 +3,9 @@ package com.patronesingsoft.Patrones_Estructurales.Decorator;
 /**
  * CONCRETE DECORATOR: agrega el envio por WhatsApp.
  */
-public class DecoradorWhatsApp extends NotificadorDecorador {
+public class DecoradorWhatsapp extends NotificadorDecorador {
 
-    public DecoradorWhatsApp(Notificador envuelto) {
+    public DecoradorWhatsapp(Notificador envuelto) {
         super(envuelto);
     }
 

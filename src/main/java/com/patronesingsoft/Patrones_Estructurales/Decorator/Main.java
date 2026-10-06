@@ -16,7 +16,7 @@ public class Main {
         avisar(conSms, aviso);
 
         System.out.println("\n=== Caso 3: email + SMS + WhatsApp (decoradores apilados) ===");
-        Notificador completo = new DecoradorWhatsApp(new DecoradorSMS(new NotificadorEmail()));
+        Notificador completo = new DecoradorWhatsapp(new DecoradorSMS(new NotificadorEmail()));
         avisar(completo, aviso);
 
         System.out.println("\n=== Caso 4a: el ORDEN importa -> SMS por fuera, Urgente por dentro ===");
