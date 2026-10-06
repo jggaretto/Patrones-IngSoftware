@@ -24,41 +24,7 @@ Memento divide la responsabilidad en 3 roles:
 
 La clave: el Caretaker guarda Mementos sin conocer su contenido interno. Así se preserva el encapsulamiento.
 
-## 3. Diagrama UML
-
-### 3.1 Diagrama de clases
-
-```mermaid
-classDiagram
-    class TextEditor {
-        -String texto
-        +escribir(t : String)
-        +mostrar()
-        +guardarEstado() TextMemento
-        +restaurar(m : TextMemento)
-    }
-    class TextMemento {
-        -String text
-        +TextMemento(text : String)
-        +getText() String
-    }
-    class Historial {
-        -List~TextMemento~ estados
-        +guardar(m : TextMemento)
-        +deshacer() TextMemento
-    }
-    class MainMemento {
-        +main(args : String[])$
-    }
-
-    TextEditor ..> TextMemento : crea >
-    Historial o--> TextMemento : guarda >
-    MainMemento --> TextEditor : usa >
-    MainMemento --> Historial : usa >
-    TextEditor <-- MainMemento : restaura vía deshacer >
-```
-
-## 4. Guía del flujo de este código de ejemplo
+## 3. Guía del flujo de este código de ejemplo
 
 Archivo por archivo:
 
