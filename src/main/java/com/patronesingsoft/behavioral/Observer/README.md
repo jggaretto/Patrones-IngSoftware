@@ -2,6 +2,8 @@
 
 **Tipo:** Conductuales. **Ejemplo:** Avisos de un curso a sus alumnos.
 
+**Para estudiar rápido:** [resumen de Observer, participantes, ejemplo y preguntas de repaso](resumen-estudio.md).
+
 ## Diapositivas y recorrido visual
 
 La [muestra para presentar Observer](../../../../../../../presentaciones/observer/README.md) incluye un [PowerPoint editable](../../../../../../../presentaciones/observer/observer.pptx), una [presentación HTML con recorrido paso a paso](../../../../../../../presentaciones/observer/presentacion.html) y [diagramas de clases, secuencia y flujo](../../../../../../../presentaciones/observer/diagramas.md).

@@ -2,6 +2,8 @@
 
 Muestra basada en `Patrones-Completos` (`cf8dbfc`). Incluye **10 diapositivas**, UML de clases, secuencias de entrega y baja, código relevante, salida real y consecuencias del patrón.
 
+Para repasar el tema antes de exponer, consultá el [resumen de estudio de Observer](../../src/main/java/com/patronesingsoft/behavioral/Observer/resumen-estudio.md).
+
 ## Abrir
 
 - [Presentación HTML](presentacion.html): abrir con un navegador. Funciona sin conexión y sin instalar dependencias.
