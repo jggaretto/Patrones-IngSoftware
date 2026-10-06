@@ -27,6 +27,8 @@ Cliente → Nivel 1 → Nivel 2 → Gerente
 
 ### Estructura del patrón
 
+![Diagrama UML](diagrama.svg)
+
 ```mermaid
 classDiagram
     class Soporte {

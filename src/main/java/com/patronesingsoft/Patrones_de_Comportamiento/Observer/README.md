@@ -26,6 +26,8 @@ Cada clase o interfaz propia está en un archivo Java con su mismo nombre. `Main
 
 El diagrama resume las relaciones y operaciones relevantes del código; omite accesores que no ayudan a explicar el patrón.
 
+![Diagrama UML](diagrama.svg)
+
 ```mermaid
 classDiagram
 class Sujeto {
